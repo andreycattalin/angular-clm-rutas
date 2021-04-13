@@ -1,3 +1,36 @@
-<p>
-  settings works!
-</p>
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+
+            <form [formGroup]="mForm" (ngSubmit)="onSave()" class="row g-2 needs-validation" novalidate>
+                <div class="col-12">
+                    <label for="validationCustom01" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="validationCustom01" formControlName="firstName" [ngClass]="{'is-invalid': isSend && f.firstName.errors}">
+                    <div class="invalid-feedback">
+                        Introduce un nombre válido
+                    </div>
+                </div>
+                <div class="col-12">
+                    <label for="validationCustom02" class="form-label">Apellidos</label>
+                    <input type="text" class="form-control" id="validationCustom02" formControlName="lastName" [ngClass]="{'is-invalid': isSend && f.lastName.errors}">
+                    <div class="invalid-feedback">
+                        Introduce un apellido válido
+                    </div>
+                </div>
+                <div class="col-12">
+                    <label for="validationCustom03" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="validationCustom03" formControlName="email" [ngClass]="{'is-invalid': isSend && f.email.errors}">
+                    <div class="invalid-feedback">
+                        Introduce un email válido
+                    </div>
+                </div>
+
+                <div class="col-12">
+                    <button class="btn btn-primary" type="submit">Guardar</button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
+<notifier-container></notifier-container>

@@ -10,6 +10,8 @@ import { PostsComponent } from './dashboard/posts/posts.component';
 import { HomeComponent } from './dashboard/home/home.component';
 import { SettingsComponent } from './dashboard/settings/settings.component';
 import { PostDetailComponent } from './dashboard/post-detail/post-detail.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NotifierModule } from 'angular-notifier';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,10 @@ import { PostDetailComponent } from './dashboard/post-detail/post-detail.compone
    ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    NotifierModule
   ],
   providers: [],
   bootstrap: [AppComponent]
